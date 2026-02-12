@@ -7,8 +7,9 @@ DirectoryIndex index.php index.html
 RewriteEngine On
 
 # Force HTTPS (Uncomment after SSL is set up)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Force HTTPS 
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Prevent directory listing
 Options -Indexes
