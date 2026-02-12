@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /config.php
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /_dev/
+
+Sitemap: https://stellorixtechnologies.in/sitemap.xml
