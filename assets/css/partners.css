@@ -1,0 +1,27 @@
+/* Partner Logos Styles */
+
+.partner-logo-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.partner-logo-link:hover {
+    transform: scale(1.1);
+}
+
+.partner-logo-link:hover .partner-logo {
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
+}
+
+.partner-logo {
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.partners-carousel {
+    padding: 20px 0;
+}
+

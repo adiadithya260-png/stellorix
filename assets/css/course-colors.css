@@ -1,0 +1,42 @@
+/* Apply mixed blue-adjacent colors to course cards */
+.course-grid .course-card:nth-child(7n+1) .course-card-header,
+.course_card:nth-child(7n+1) .top {
+    background: var(--color-3);
+    /* Teal */
+}
+
+.course-grid .course-card:nth-child(7n+2) .course-card-header,
+.course_card:nth-child(7n+2) .top {
+    background: var(--color-6);
+    /* Purple-Blue */
+}
+
+.course-grid .course-card:nth-child(7n+3) .course-card-header,
+.course_card:nth-child(7n+3) .top {
+    background: var(--color-1);
+    /* Bright Cyan */
+}
+
+.course-grid .course-card:nth-child(7n+4) .course-card-header,
+.course_card:nth-child(7n+4) .top {
+    background: var(--color-5);
+    /* Indigo */
+}
+
+.course-grid .course-card:nth-child(7n+5) .course-card-header,
+.course_card:nth-child(7n+5) .top {
+    background: var(--color-2);
+    /* Sky Blue */
+}
+
+.course-grid .course-card:nth-child(7n+6) .course-card-header,
+.course_card:nth-child(7n+6) .top {
+    background: var(--color-7);
+    /* Navy Blue */
+}
+
+.course-grid .course-card:nth-child(7n) .course-card-header,
+.course_card:nth-child(7n) .top {
+    background: var(--color-4);
+    /* Royal Blue */
+}
