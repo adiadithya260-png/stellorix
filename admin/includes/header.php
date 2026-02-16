@@ -11,7 +11,7 @@ if (!isset($pageTitle)) {
     <title><?php echo $pageTitle; ?> - Stellogix Technologies Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/admin.css">
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
@@ -42,11 +42,7 @@ if (!isset($pageTitle)) {
                                 <i class="bi bi-book"></i> Courses
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo SITE_URL; ?>/admin/contact-queries.php">
-                                <i class="bi bi-envelope"></i> Contact Queries
-                            </a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo SITE_URL; ?>/admin/demo-requests.php">
                                 <i class="bi bi-calendar-check"></i> Demo Requests

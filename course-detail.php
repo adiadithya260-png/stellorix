@@ -420,7 +420,7 @@ require_once 'includes/header.php';
 
         <div class="divider"></div>
 
-        <a href="https://wa.me/91<?php echo str_replace(['+', ' ', '-'], '', $sitePhone); ?>?text=Hi%2C%20I'm%20interested%20in%20the%20<?php echo urlencode($course['title']); ?>%20course" class="register-btn" target="_blank">
+        <a href="https://wa.me/<?php echo preg_replace('/[^0-9]/', '', !empty($whatsappNumber) ? $whatsappNumber : $sitePhone); ?>?text=Hi%2C%20I'm%20interested%20in%20the%20<?php echo urlencode($course['title']); ?>%20course" class="register-btn" target="_blank">
             Register Now <i class="bi bi-arrow-right"></i>
         </a>
     </div>

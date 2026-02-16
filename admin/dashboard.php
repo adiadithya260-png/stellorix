@@ -7,11 +7,12 @@ requireAdminLogin();
 // Get statistics
 try {
     $totalCourses = $pdo->query("SELECT COUNT(*) FROM courses")->fetchColumn();
-    $activeCourses = $pdo->query("SELECT COUNT(*) FROM courses WHERE status = 'active'")->fetchColumn();
+    // Status column removed from courses, so we track Active Jobs instead
+    $activeJobs = $pdo->query("SELECT COUNT(*) FROM jobs WHERE status = 'active'")->fetchColumn(); 
     $totalDemos = $pdo->query("SELECT COUNT(*) FROM demo_requests")->fetchColumn();
     $newDemos = $pdo->query("SELECT COUNT(*) FROM demo_requests WHERE status = 'new'")->fetchColumn();
 } catch(PDOException $e) {
-    $totalCourses = $activeCourses = $totalDemos = $newDemos = 0;
+    $totalCourses = $activeJobs = $totalDemos = $newDemos = 0;
 }
 
 $pageTitle = 'Admin Dashboard';
@@ -28,8 +29,8 @@ include 'includes/header.php';
 
     <!-- Statistics Cards -->
     <div class="row mb-4">
-        <div class="col-md-3 mb-3">
-            <div class="card bg-primary text-white">
+        <div class="col-md-4 mb-3">
+            <div class="card bg-primary text-white h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
@@ -41,22 +42,22 @@ include 'includes/header.php';
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-3">
-            <div class="card bg-success text-white">
+        <div class="col-md-4 mb-3">
+            <div class="card bg-success text-white h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <h6 class="card-subtitle mb-2">Active Courses</h6>
-                            <h2 class="mb-0"><?php echo $activeCourses; ?></h2>
+                            <h6 class="card-subtitle mb-2">Active Jobs</h6>
+                            <h2 class="mb-0"><?php echo $activeJobs; ?></h2>
                         </div>
-                        <i class="bi bi-check-circle fs-1 opacity-50"></i>
+                        <i class="bi bi-briefcase fs-1 opacity-50"></i>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-3 mb-3">
-            <div class="card bg-info text-white">
+        <div class="col-md-4 mb-3">
+            <div class="card bg-info text-white h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
@@ -74,7 +75,7 @@ include 'includes/header.php';
     <!-- Quick Actions -->
     <div class="row">
         <div class="col-md-6 mb-4">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-header">
                     <h5 class="mb-0">Quick Actions</h5>
                 </div>
@@ -95,7 +96,7 @@ include 'includes/header.php';
             </div>
         </div>
         <div class="col-md-6 mb-4">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-header">
                     <h5 class="mb-0">Recent Activity</h5>
                 </div>

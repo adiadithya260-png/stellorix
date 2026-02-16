@@ -80,7 +80,7 @@ if (file_exists(__DIR__ . '/../assets/images/stellorix-logo-full.png')) {
                     <a href="mailto:<?php echo htmlspecialchars($siteEmail); ?>" aria-label="Email us"><i class="bi bi-envelope-fill" aria-hidden="true"></i> <span>Mail</span></a>
                     <a href="<?php echo htmlspecialchars($instagram); ?>" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i> <span>Instagram</span></a>
                     <a href="<?php echo htmlspecialchars($linkedin); ?>" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
-                    <a href="https://wa.me/91<?php echo str_replace(['+', ' ', '-'], '', $sitePhone); ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i> <span>WhatsApp</span></a>
+<a href="https://wa.me/<?php echo preg_replace('/[^0-9]/', '', !empty($whatsappNumber) ? $whatsappNumber : $sitePhone); ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i> <span>WhatsApp</span></a>
                 </nav>
             </div>
         </div>

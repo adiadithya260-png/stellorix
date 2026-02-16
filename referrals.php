@@ -44,7 +44,7 @@ require_once 'includes/header.php';
 
                 <!-- Card 3 -->
                 <div class="referral-col">
-                    <a href="https://wa.me/91<?php echo str_replace(['+', ' ', '-'], '', $sitePhone); ?>?text=I'm%20interested%20in%20referring%20someone" target="_blank" class="referral-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+                    <a href="https://wa.me/<?php echo preg_replace('/[^0-9]/', '', !empty($whatsappNumber) ? $whatsappNumber : $sitePhone); ?>?text=I'm%20interested%20in%20referring%20someone" target="_blank" class="referral-card" style="text-decoration: none; color: inherit; cursor: pointer;">
                         <div class="ref-icon"><i class="bi bi-gift-fill"></i></div>
                         <h3 class="ref-title">Earn<br>Rewards</h3>
                         <p class="ref-desc">Click here to start referring via WhatsApp!</p>

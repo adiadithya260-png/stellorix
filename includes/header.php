@@ -5,6 +5,13 @@ $logoIconUrl = rtrim($basePath, '/') . '/assets/images/logo-icon.png?v=' . (file
 if (!isset($siteName)) $siteName = 'Stellorix Technologies';
 if (!isset($siteUrl)) $siteUrl = defined('SITE_URL') ? SITE_URL : '';
 
+// Fetch Social & Contact Settings
+if (!isset($instagram)) $instagram = getSetting('instagram_url', '#');
+if (!isset($linkedin)) $linkedin = getSetting('linkedin_url', '#');
+if (!isset($whatsappNumber)) $whatsappNumber = getSetting('whatsapp_number', '');
+if (!isset($sitePhone)) $sitePhone = getSetting('site_phone', '');
+if (!isset($siteEmail)) $siteEmail = getSetting('site_email', '');
+
 // SEO defaults
 $defaultDescription = 'Stellorix Technologies offers professional IT training courses including Data Science, Full Stack Development, Data Analytics, and more. Join 10,000+ students and advance your tech career.';
 $defaultKeywords = 'IT training, Data Science course, Full Stack Development, Data Analytics, MERN Stack, UI/UX Design, SAP training, Digital Marketing, Hyderabad, online courses, certification';
